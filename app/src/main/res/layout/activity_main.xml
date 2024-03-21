@@ -12,7 +12,7 @@
         android:id="@+id/fragment_addNote"
         android:name="com.example.tms_lesson_20.Fragments.NoteFragment"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/_250dp"
         android:layout_marginBottom="@dimen/_10dp"
         app:layout_constraintBottom_toTopOf="@+id/fragment_allNote"
         app:layout_constraintEnd_toEndOf="parent"

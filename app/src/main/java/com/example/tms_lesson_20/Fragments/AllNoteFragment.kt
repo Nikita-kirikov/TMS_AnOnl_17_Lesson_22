@@ -30,7 +30,6 @@ class AllNoteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
-        actions()
     }
 
     override fun onDestroyView() {
@@ -41,15 +40,6 @@ class AllNoteFragment : Fragment() {
     private fun init() {
         binding.recycler.adapter = myAdapter
         myAdapter.submitList(ArrayList(SingletonList.getNotes()))
-    }
-
-    private fun actions() {
-        myAdapter.onLongClick = {
-            SingletonList.importantItem(it)
-            Toast.makeText(context, "status has been chenged", Toast.LENGTH_SHORT).show()
-            myAdapter.submitList(ArrayList(SingletonList.getNotes()))
-            myAdapter.notifyItemChanged(myAdapter.itemCount)
-        }
     }
 
     companion object {

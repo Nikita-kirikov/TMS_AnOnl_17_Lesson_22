@@ -47,14 +47,16 @@ class NoteFragment : Fragment() {
     private fun createNewNote() {
         with(binding) {
             val headerNote = header.text.toString().trim()
-            var textNote = text.text.toString().trim()
+            val textNote = text.text.toString().trim()
+            val important = radioButton.isChecked
 
-            val newNote = Note(headerNote, textNote)
+            val newNote = Note(headerNote, textNote, important)
 
             AllNoteFragment.updateList(newNote)
 
             header.text?.clear()
             text.text?.clear()
+            radioButton.isChecked = false
         }
     }
 }

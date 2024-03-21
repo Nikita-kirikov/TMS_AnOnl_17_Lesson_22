@@ -25,6 +25,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header" />
 
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="@string/important"
+        app:layout_constraintStart_toStartOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/save"
         android:layout_width="match_parent"
@@ -35,7 +44,6 @@
         android:background="@drawable/button"
         android:layout_margin="@dimen/_15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text" />
-
+        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
